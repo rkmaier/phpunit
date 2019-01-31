@@ -24,8 +24,6 @@ class TestControllerTest extends BaseTestCase
     public function setUp()
     {
         $this->http = new \GuzzleHttp\Client();
-
-        // Load test db with data
         $pdo = new PDOConnector(
             $_ENV['DB_HOST'], // server
             $_ENV['DB_USER'],      // user
@@ -34,14 +32,23 @@ class TestControllerTest extends BaseTestCase
         );
 
         $pdoConn = $pdo->connect('utf8', []); // charset, options
-
         $this->dbConn = new Mysql($pdoConn);
+
+        // Insert some dummy data for testing
+
+        $data = [
+            'id'   => 1,
+            'name' => 'PHPUnit',
+        ];
+
+        $pdoConn->insert('users', $data);
 
     }
 
     public function tearDown()
     {
         $this->http = null;
+        $this->dbConn->delete('users', ['id' => 1]);
     }
 
     public function testHello()
