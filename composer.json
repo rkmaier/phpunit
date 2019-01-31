@@ -1,0 +1,14 @@
+{
+    "autoload": {
+        "classmap": [
+            "Controllers/TestController.php"
+        ]
+    },
+    "require-dev": {
+        "phpunit/phpunit": "6.5"
+    },
+    "require": {
+        "guzzlehttp/guzzle": "^6.3",
+        "simplon/mysql": "^2.2"
+    }
+}

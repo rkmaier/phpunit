@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit backupGlobals="false"
+         backupStaticAttributes="false"
+         bootstrap="vendor/autoload.php"
+         colors="true"
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true"
+         processIsolation="false"
+         stopOnFailure="false">
+    <testsuites>
+        <testsuite name="Unit">
+            <directory suffix="Test.php">./tests</directory>
+        </testsuite>>
+    </testsuites>
+    <php>
+        <env name="DB_HOST" value="localhost" />
+        <env name="DB_USER" value="root" />
+        <env name="DB_PASSWORD" value="" />
+        <env name="DB_NAME" value="database_test" />
+    </php>
+</phpunit>
