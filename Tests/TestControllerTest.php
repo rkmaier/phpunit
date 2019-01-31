@@ -41,7 +41,7 @@ class TestControllerTest extends BaseTestCase
             'name' => 'PHPUnit',
         ];
 
-        $pdoConn->insert('users', $data);
+        $this->dbConn->insert('users', $data);
 
     }
 
