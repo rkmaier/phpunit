@@ -1,0 +1,35 @@
+version: '3'
+services:
+  web:
+    container_name: server_1_test
+    build: ./docker/laravel-php7
+    ports:
+      - 8888:80
+    restart: always
+    tty: true
+    stdin_open: true
+    links:
+      - db
+    volumes:
+      - ./:/var/www
+      - ./data/logs/apache:/var/log/apache2
+
+  db:
+    container_name: database_1_test
+    image: dydx/alpine-mariadb
+    restart: always
+    ports:
+      - 3306:3306
+    volumes:
+      - ./data:/var/lib/mysql
+      - ./testData.sql:/testData.sql
+      - ./docker/conf/my.cnf:/etc/mysql/my.cnf
+      - ./docker/scripts/mariadb_init.sh:/mariadb_init.sh
+      - ./docker/scripts/run.sh:/run.sh
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: erik
+      MYSQL_PASSWORD: skipjack
+      MYSQL_DATABASE: database_1_test
+
+

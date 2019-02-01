@@ -1,5 +1,5 @@
 <?php
-namespace Controllers;
+namespace app\Controllers;
 /**
  * Created by PhpStorm.
  * User: Erik

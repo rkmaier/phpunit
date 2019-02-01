@@ -1,7 +1,7 @@
 {
     "autoload": {
         "classmap": [
-            "Controllers/TestController.php"
+            "app/Controllers/TestController.php"
         ]
     },
     "require-dev": {

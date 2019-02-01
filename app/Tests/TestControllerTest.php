@@ -1,12 +1,7 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Erik
- * Date: 31/01/2019
- * Time: 18:51
- */
 
-namespace Tests;
+
+namespace app\Tests;
 
 use app\Controllers\TestController;
 use PHPUnit\Framework\TestCase as BaseTestCase;

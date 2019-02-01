@@ -14,9 +14,9 @@
         </testsuite>>
     </testsuites>
     <php>
-        <env name="DB_HOST" value="localhost" />
-        <env name="DB_USER" value="root" />
-        <env name="DB_PASSWORD" value="" />
-        <env name="DB_NAME" value="database_test" />
+        <env name="DB_HOST" value="database_1_test" />
+        <env name="DB_USER" value="erik" />
+        <env name="DB_PASSWORD" value="skipjack" />
+        <env name="DB_NAME" value="database_1_test" />
     </php>
 </phpunit>
