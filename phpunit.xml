@@ -11,7 +11,7 @@
     <testsuites>
         <testsuite name="Unit">
             <directory suffix="Test.php">./tests</directory>
-        </testsuite>>
+        </testsuite>
     </testsuites>
     <php>
         <env name="DB_HOST" value="database_1_test" />

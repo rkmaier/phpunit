@@ -19,4 +19,21 @@ class TestController
         return "World";
     }
 
+    public function condition()
+    {
+        return true;
+    }
+
+    public function myArray()
+    {
+        return ['test' => '1', '2', '3'];
+    }
+
+    public function myObject()
+    {
+        $car = new \stdClass();
+        $car->name = "BMW";
+        return $car;
+    }
+
 }

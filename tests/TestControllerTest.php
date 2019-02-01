@@ -52,6 +52,33 @@ class TestControllerTest extends BaseTestCase
         $this->dbConn->delete('users', ['id' => 1]);
     }
 
+
+    public function testCondition()
+    {
+        $controller = new TestController();
+        $test = $controller->condition();
+        $this->assertTrue($test);
+    }
+
+    public function testMyObject()
+    {
+        $this->markTestSkipped();
+        $controller = new TestController();
+        $test = $controller->myObject();
+        $test->name = "BMW";
+        $this->assertSame($test,new \stdClass());
+    }
+
+    public function testMyArray()
+    {
+        $controller = new TestController();
+        $test = $controller->myArray();
+        $this->assertArrayHasKey('test',$test);
+        $this->assertContains(1,$test);
+    }
+
+
+
     public function testHello()
     {
         $controller = new TestController();
